@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Whatsapp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <!-- Font Awesome File -->
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+  <style>
+    .login{
+      margin-top: 30px;
+      margin-bottom: 50px;
+      padding: 30px;
+      background-color: #eeeeee;
+      height: auto;
+      border: 1px #d8d8d8 solid !important;
+      border-radius: 5px;
+    }
+    .login input{
+      margin-top:10px;
+    }
+    .btn-success {
+        color: #fff;
+        background-color: #009688;
+        border-color: #009688;
+    }
+    div{
+      height: auto;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container app">
+    <div class="row app-one">
+  
+      <div class="col-sm-12 conversation">
+        <!-- Heading -->
+        <div class="row heading">
+          <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+            <div class="heading-avatar-icon">
+            </div>
+          </div>
+          
+
+          <div class="col-sm-8 col-xs-7 heading-name">
+          </div>
+
+
+          <div class="col-sm-1 col-xs-1  heading-dot pull-right">
+            <i class="fa fa-plus fa-2x  pull-right" aria-hidden="true" onclick="modalRegistro()"></i>
+          </div>
+        </div>
+        <!-- Heading End -->
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          <div class="login text-center">
+            <img src="img/favicon.png" style="width:80px;"><br><br>
+            <input type="email" id="emailToLogin" class="form-control" placeholder="Correo">
+            <input type="password" id="passwordToLogin" class="form-control" placeholder="Password">
+            <input type="button" class="btn btn-success" onclick="login()" value="Login">  
+          </div>
+        </div>
+        <div class="col-lg-4"></div>
+        <!-- Reply Box -->
+
+        <!-- Reply Box End -->
+      </div>
+      <!-- Conversation End -->
+    </div>
+    <!-- App One End -->
+  </div>
+
+
+
+  <!-- Modal -->
+<div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRegistroLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3>Registro de usuarios</h3>
+          <div class="form-group">
+            <label for="userName">Nombre de usuario</label>
+            <input type="text" class="form-control" id="userName" placeholder="Nombre usuario">
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="text" class="form-control" id="email" placeholder="E-mail">
+          </div>
+          <div class="form-group">
+            <label for="image">Imagen</label>
+            <input type="text" class="form-control" id="image" placeholder="URL imagen">
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="guardarUsuario()">Crear usuario</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal con mensaje -->
+  <div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRegistroLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3 id="mensaje"></h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/controlador.js"></script>
+  <!-- App End -->
+</body>
+
+</html>
